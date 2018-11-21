@@ -1,0 +1,99 @@
+.application{
+    width:95%;
+    margin: 0 auto;
+
+}
+#number-projects-nd {
+   font-size: 60px;
+}
+ 
+#total-donations-nd {
+   font-size: 60px;
+}
+ 
+#menu-select{
+    float:none;
+    text-align: center;
+ }
+
+#intro_button{
+    float:right;
+    margin:10px;
+ }
+
+span.introjs-helperNumberLayer{
+    padding:0px;
+    width:30px;
+    height:30px;
+    border-radius: 100%;
+    font-size:20px;
+}
+ 
+.dc-chart g.row text {
+   fill: black;
+   font-size: 12px;
+}
+
+#loading{
+    z-index: 1000;
+    background: linear-gradient(20deg, blue, black);
+    color: white;
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    text-align:center;
+    font-weight: bold;
+    left: 0;
+    padding-top: 15%;
+
+
+}
+ 
+#total-projects {
+   background: #33CC99;
+   width: 200px;
+   position: relative;
+   height: 60px;
+   font-size: 29px;
+   color: white;
+   vertical-align: middle;
+   text-align: center;
+   padding-top: 12px;
+   padding-bottom: 0px;
+}
+ 
+#net-donations {
+   background: #33CC99;
+   width: 200px;
+   position: relative;
+   height: 60px;
+   font-size: 29px;
+   color: white;
+   vertical-align: middle;
+   text-align: center;
+   padding-top: 12px;
+   padding-bottom: 0px;
+}
+ 
+ 
+.dc-select-menu {
+   background: #33CC99;
+   width: 80%;
+   border: none;
+   position: relative;
+   height: 31px;
+   font-size: 15px;
+   color: white;
+   vertical-align: middle;
+   text-align: center;
+   padding-top: 4px;
+   padding-bottom: 0px;
+ 
+}
+@media only screen and (max-width: 768px) {
+    .chart-wrapper{
+        font-size:12px ;
+    }
+
+}
+

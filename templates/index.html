@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Donations Dashboard</title>
+    <link rel="stylesheet" href="/static/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/css/keen-dashboards.css">
+    <link rel="stylesheet" href="/static/lib/css/dc.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/lib/css/introjs.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <script src="/static/lib/js/jquery.min.js"></script>
+
+ </head>
+<body class="application">
+ 
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container-fluid">
+       <div class="nav navbar-header">
+           <a class="navbar-brand" href="/">School Donations Dashboard</a>
+       </div>
+       <button class="btn btn-info" id="intro_button"  type="button" autofocus onclick="javascript:introJs().start();">
+           Start Tour!
+       </button>
+
+       </div>
+</nav>
+ 
+ 
+<div  id="outer" class="container-fluid">
+    <div id="loading">
+        <h1>Loading....</h1>
+        <h4> It will take few seconds to load. Patience Required!</h4>
+        <h3>Thank you!!!</h3>
+
+
+    </div>
+
+    <div class="row">
+
+        <!-- menu select -->
+        <div class="col-md-12">
+           <div class="chart-wrapper" data-step="1" data-intro="Dropdown menu enable to choose any(or all) state" data-position="bottom" style="font-weight:normal">
+               <div class="chart-title">
+                   Select State
+               </div>
+               <div class="chart-stage">
+                   <div id="menu-select"></div>
+               </div>
+           </div>
+        </div>
+    </div>
+        <!-- menu select -->
+        <!-- Time Chart -->
+        <div class="row">
+               <div class="col-md-12">
+                   <div class="chart-wrapper" data-step="2" data-intro="A bar chart that shows total donations made over a time span" data-position="top" style="font-weight:normal">
+                       <div class="chart-title">
+                          Year and Number of Donations
+                       </div>
+                       <div class="chart-stage">
+                           <div id="time-chart"></div>
+                       </div>
+                   </div>
+               </div>
+        <!-- Time Chart -->
+    </div>
+    <div class="row">
+                <!-- funding Pie -->
+                <div class="col-md-3">
+                   <div class="chart-wrapper" data-step="3" data-intro="A pie chart that shows status of funds.Does funding expired, completed or still funding." data-position="top" style="font-weight:normal">
+                       <div class="chart-title">
+                           Funding Status
+                       </div>
+                       <div class="chart-stage">
+                           <div id="funding-chart"></div>
+                       </div>
+                   </div>
+                </div>
+                <!-- funding Pie -->
+                <!--focusSubject Pie -->
+               <div class="col-md-3">
+                   <div class="chart-wrapper" data-step="4" data-intro="A pie chart that shows primary focus subjects on which funding utilised." data-position="top" style="font-weight:normal">
+                       <div class="chart-title">
+                           Primary Focus Subject
+                       </div>
+                       <div class="chart-stage">
+                           <div id="focus-subject-chart"></div>
+                       </div>
+                   </div>
+               </div>
+               <!--focusSubject Pie -->
+                <!-- Poverty -->
+               <div class="col-md-3">
+                   <div class="chart-wrapper" data-step="5" data-intro="A row chart that shows the poverty level changes of schools according to funding" data-position="top" style="font-weight:normal">
+                       <div class="chart-title">
+                            Poverty Level
+                       </div>
+                       <div class="chart-stage">
+                            <div id="poverty-level-row-chart"></div>
+                       </div>
+                   </div>
+               </div>
+               <!-- Poverty -->
+
+        <!-- Resources -->
+        <div class="col-md-3">
+            <div class="chart-wrapper"data-step="6" data-intro="A row chart that shows the change in resources" data-position="top" style="font-weight:normal">
+                <div class="chart-title">
+                    Resources Type
+                </div>
+                <div class="chart-stage">
+                    <div id="resource-type-row-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Resources -->
+    </div>
+    <div class="row">
+
+        <!-- Metric 2 -->
+        <div class="col-md-6">
+           <div class="chart-wrapper"data-step="7" data-intro="Total donations of selected state" data-position="top" style="font-weight:normal">
+               <div class="chart-title">
+                   Total Number of Donations
+               </div>
+               <div class="chart-stage" style=" background: #33CC99;
+                   position: relative;
+                   font-size: 29px;
+                   color: white;
+                   vertical-align: middle;
+                   text-align: center;
+                   padding-top: 12px;
+                   padding-bottom: 0px;">
+                   <div id="number-projects-nd"></div>
+               </div>
+           </div>
+        </div>
+        <!-- Metric 2 -->
+              <!-- Metric 1 -->
+
+                <div class="col-md-6">
+                    <div class="chart-wrapper" data-step="8" data-intro="Value of donations for the selected state in USD" data-position="top" style="font-weight:normal">
+                        <div class="chart-title">
+                            Total Donations in USD
+                        </div>
+                        <div class="chart-stage">
+                            <div id="total-donations-nd"></div>
+                        </div>
+                    </div>
+                </div>
+        <!-- Metric 1 -->
+    </div>
+<hr>
+<p class="small text-muted"> Dashboard created by Pramatha Madhavankutty</p>
+ 
+</div>
+<script src="/static/lib/js/jquery.min.js"></script>
+<script src="/static/lib/js/bootstrap.min.js"></script>
+<script src="/static/lib/js/crossfilter.js"></script>
+<script src="/static/lib/js/d3.js"></script>
+<script src="/static/lib/js/dc.js"></script>
+<script src="/static/lib/js/queue.js"></script>
+<script src="/static/lib/js/intro.min.js"></script>
+<script src="/static/lib/js/keen.min.js"></script>
+<script src='/static/js/graph.js' type='text/javascript'></script>
+
+</body>
+</html>
