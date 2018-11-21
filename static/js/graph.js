@@ -1,11 +1,12 @@
 queue()
-   .defer(d3.json, "/donorsUS/projects")
+   .defer(d3.json, "/get_donations")
    .await(makeGraphs);
  
 function makeGraphs(error, projectsJson) {
  
    //Clean projectsJson data
    var donorsUSProjects = projectsJson;
+   console.log(donorsUSProjects)
    var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
    donorsUSProjects.forEach(function (d) {
                    d["date_posted"] = dateFormat.parse(d["date_posted"]);
@@ -134,5 +135,5 @@ function makeGraphs(error, projectsJson) {
         .group(numProjectsByFocusSubject);
 
     dc.renderAll();
-    $('#loading').hide();
+    $('#centered').hide();
 }

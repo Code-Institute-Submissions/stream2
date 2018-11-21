@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>School Donations Dashboard</title>
+    <title>Donations</title>
     <link rel="stylesheet" href="/static/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/lib/css/keen-dashboards.css">
     <link rel="stylesheet" href="/static/lib/css/dc.css">
@@ -18,23 +18,20 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
    <div class="container-fluid">
        <div class="nav navbar-header">
-           <a class="navbar-brand" href="/">School Donations Dashboard</a>
+           <a class="navbar-brand" href="/">Donations Dashboard</a>
        </div>
-       <button class="btn btn-info" id="intro_button"  type="button" autofocus onclick="javascript:introJs().start();">
-           Start Tour!
-       </button>
+      
 
        </div>
 </nav>
  
  
 <div  id="outer" class="container-fluid">
-    <div id="loading">
-        <h1>Loading....</h1>
-        <h4> It will take few seconds to load. Patience Required!</h4>
-        <h3>Thank you!!!</h3>
-
-
+    
+    <div id="centered">
+                    <div class = "blob-1"></div>
+                    <div class = "blob-2"></div>
+                </div>
     </div>
 
     <div class="row">
@@ -117,44 +114,7 @@
         </div>
         <!-- Resources -->
     </div>
-    <div class="row">
 
-        <!-- Metric 2 -->
-        <div class="col-md-6">
-           <div class="chart-wrapper"data-step="7" data-intro="Total donations of selected state" data-position="top" style="font-weight:normal">
-               <div class="chart-title">
-                   Total Number of Donations
-               </div>
-               <div class="chart-stage" style=" background: #33CC99;
-                   position: relative;
-                   font-size: 29px;
-                   color: white;
-                   vertical-align: middle;
-                   text-align: center;
-                   padding-top: 12px;
-                   padding-bottom: 0px;">
-                   <div id="number-projects-nd"></div>
-               </div>
-           </div>
-        </div>
-        <!-- Metric 2 -->
-              <!-- Metric 1 -->
-
-                <div class="col-md-6">
-                    <div class="chart-wrapper" data-step="8" data-intro="Value of donations for the selected state in USD" data-position="top" style="font-weight:normal">
-                        <div class="chart-title">
-                            Total Donations in USD
-                        </div>
-                        <div class="chart-stage">
-                            <div id="total-donations-nd"></div>
-                        </div>
-                    </div>
-                </div>
-        <!-- Metric 1 -->
-    </div>
-<hr>
-<p class="small text-muted"> Dashboard created by Pramatha Madhavankutty</p>
- 
 </div>
 <script src="/static/lib/js/jquery.min.js"></script>
 <script src="/static/lib/js/bootstrap.min.js"></script>
