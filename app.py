@@ -19,7 +19,7 @@ def index():
 def donor_projects():
     client = MongoClient(URI)
     collection = client[DATABASE][COLLECTION]
-    donations = collection.find(projection=FIELDS, limit=2000)
+    donations = collection.find(projection=FIELDS, limit=5000)
     donation_list = []
     for donation in donations:
         donation_list.append(donation)
